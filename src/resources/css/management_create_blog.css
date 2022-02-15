@@ -1,0 +1,95 @@
+.headerBlank{
+    height: 60px;
+}
+.updateUser{
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+}
+.formArea{
+    height: 100%;
+    text-align: left;
+    padding: 3rem 5rem;
+}
+.baseFormArea{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+.baseFormLabel{
+    width: 11rem;
+    display: inline-block;
+    font-size: 20px;
+}
+.baseFormInput{
+    height: 1.7rem;
+    width: 25rem;
+}
+.subFormArea{
+    border: 1px solid blue;
+    padding: 30px 15px;
+    border-radius: 5px;
+    margin-bottom: 3.5rem;
+}
+.textAreaForm{
+    width: 780px;
+    height: 290px;
+    font-size: 14px;
+}
+.buttonArea{
+    text-align: center;
+}
+.blackButtonStyle{
+    width: 150px;
+    letter-spacing: 1px;
+    color: white;
+    background: black;
+    height: 40px;
+    border-radius: 5px;
+}
+.blueButtonStyle{
+    background-color: rgb(33 39 213);
+    width: 190px;
+    letter-spacing: 1px;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+.registButton{
+    width: 190px;
+}
+
+::-webkit-input-placeholder{
+    font-family: "Verdana",  sans-serif;
+}
+:-moz-placeholder {
+    font-family: "Verdana",  sans-serif;
+}
+.addNum{
+    margin-bottom: 20px;
+    color: red;
+    letter-spacing: 1px;
+}
+.delLink{
+    color: rgb(33 39 213);
+    border-bottom: 1px solid rgb(33 39 213);
+    margin-left: 10px;
+}
+.bottom{
+    margin-bottom: 15px;
+}
+.error{
+    color:red;
+    margin-top: 20px;
+    text-align: center;
+}
+.marginLeft{
+    margin-left: 10px;
+}
+.marginRight{
+    margin-right: 10px;
+}
+.selectBox{
+    width: 10rem;
+    height: 1.7rem;
+}

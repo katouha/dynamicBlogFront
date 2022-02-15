@@ -1,0 +1,58 @@
+.loginContent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginContainer{
+    padding: 30px 100px;
+    border: 1.5px solid rgb(42, 111, 240);
+    border-radius: 15px;
+}
+.loginTitle{
+    text-align: left;
+    color:black;
+    margin-bottom: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.formContent{
+    display: flex;
+    justify-content: center;
+}
+.LoginFormArea{
+    margin-bottom: 20px;
+}
+.loginLabel{
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+.loginInput{
+    display: block;
+}
+.loginInput{
+    height: 20px;
+    width: 200px;
+    padding: 5px;
+}
+.loginBtn{
+    width: 150px;
+    height: 35px;
+    background:rgb(33 39 213);
+    border: none;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.errorMessage{
+    color:red;
+    font-size: 13px;
+    text-align: left;
+}
+.errorMessageArea{
+    margin-bottom: 10px;
+}
+

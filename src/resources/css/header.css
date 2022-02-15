@@ -1,0 +1,27 @@
+.headerContant{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: rgb(33 39 213);
+}
+.headerContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoutBtn{
+    width:105px;
+    height: 35px;
+    background-color: white;
+    color: rgb(33 39 213);
+    border: 1px solid#e30cbe;
+    border-radius: 50px;
+    position: absolute;
+    right: 30px;
+}
+.headerTitle{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
