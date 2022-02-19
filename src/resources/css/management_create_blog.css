@@ -29,10 +29,15 @@
     padding: 30px 15px;
     border-radius: 5px;
     margin-bottom: 3.5rem;
+    width:75%;
 }
 .textAreaForm{
     width: 780px;
     height: 290px;
+    font-size: 14px;
+}
+.discriptionAreaForm{
+    height: 190px;
     font-size: 14px;
 }
 .buttonArea{

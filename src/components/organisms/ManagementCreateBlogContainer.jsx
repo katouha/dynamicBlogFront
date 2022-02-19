@@ -1,13 +1,11 @@
 import React,{useState,useEffect,useLayoutEffect} from "react";
 import './../../resources/css/header.css'
 import { Button } from "../atoms/Button";
-import { Label } from "../atoms/Label";
-import { useNavigate } from 'react-router-dom';
 import './../../resources/css/management_create_blog.css'
 import { InputForm } from "../molecules/InputForm";
 import {TextAreaForm} from "../molecules/TextAreaForm"
-import {Link} from "../atoms/Link"
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import { SelectBoxForm } from "../molecules/SelectBoxForm";
 export const ManagementCreateBlogContainer = (props) =>{
 
@@ -15,8 +13,7 @@ export const ManagementCreateBlogContainer = (props) =>{
     const [title,setTitle] = useState("");
     const [subTitle,setSubTitle] = useState("");
     const [body,setBody] = useState("");
-    const [image,setImage] = useState({});
-    const [imagePath,setImagePath] = useState("");
+    const [discription,setDiscription] = useState("");
     const [addList,setAddList] = useState([]);
     const [errorMessage,setErrorMessage] = useState("");
     const [preErrorMessage,setPreErrorMessage] = useState("");
@@ -24,7 +21,6 @@ export const ManagementCreateBlogContainer = (props) =>{
     const [kbnList,setKbnList] = useState([]);
     const [kbnVal,setKbnVal] = useState("");
     useLayoutEffect(() => {
-        let errorFlg = false;
         axios.get("http://localhost:8080/dynamicBlog/getBlogKbnList")
         .then(res => {
             let apiResult = res.data.result.returnCd;
@@ -32,16 +28,17 @@ export const ManagementCreateBlogContainer = (props) =>{
             if(apiResult === "0"){
                 let kbnList = res.data.result.kbnInfo;
                 setKbnList(kbnList);
-            }else{
-                errorFlg=true;
             }
         })
         
     },[]);
     useEffect(() => {
         let user = localStorage.getItem("loginUser");
-        if(user !== null){
+        if(user !== null && user !== undefined){
             setUser(user);
+        }else{
+            localStorage.clear();
+            navigate("/management/login");
         }
     },[]);
     //フォーム入力値をステートに格納
@@ -59,6 +56,9 @@ export const ManagementCreateBlogContainer = (props) =>{
             case 'blogSelect':
                 setKbnVal(e.target.value);
                 break;
+            case 'discriptionForm':
+                setDiscription(e.target.value);
+                break;    
         }
     }
 
@@ -123,6 +123,7 @@ export const ManagementCreateBlogContainer = (props) =>{
             const jsonData = {
                 blogList:obj,
                 title:title,
+                blogdiscription:discription,
                 userName:user,
                 blogKbn:kbnVal,
                 apiFlg:seq === null ? true : false,
@@ -161,6 +162,7 @@ export const ManagementCreateBlogContainer = (props) =>{
         setSubTitle("");
         setAddList([]);
         setBody("");
+        setDiscription("");
         let image = document.getElementById('imageInput');
         image.value = '';
     }
@@ -193,6 +195,17 @@ export const ManagementCreateBlogContainer = (props) =>{
                         placeholder={"タイトルを入力してください"}
                         type={"input"}
                         inputId={"titleInput"}
+                        onChange={handleChange}
+                    />
+                    <TextAreaForm
+                        formAreaClass={"subTitleFormArea baseFormArea"}
+                        labelValue={"ブログ説明文"}
+                        labelClassName={"formLabel baseFormLabel"}
+                        labelId={"discription"}
+                        textAreaValue={discription}
+                        TextAreaClassName={"discriptionAreaForm baseFormInput"}
+                        placeholder={"本文を入力してください"}
+                        textAreaId={"discriptionForm"}
                         onChange={handleChange}
                     />
                     <div className={"subFormArea"}>

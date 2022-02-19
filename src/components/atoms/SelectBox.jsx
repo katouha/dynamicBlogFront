@@ -6,7 +6,7 @@ export const SelectBox = (props) =>{
             {
             props.kbnList.map((data,index) => {
                 return(
-                <option value={data.blogKbn}>{data.kbnName}</option>
+                <option value={data.blogkbn}>{data.kbnname}</option>
                 )
             })}
         </select>

@@ -4,7 +4,10 @@ import { ManagementCreateBlogContainer } from "../organisms/ManagementCreateBlog
 export const ManagementCreateBlogTemplate = (props) =>{
     return(
         <>
-            <HeaderContainer displayFlg = {true} />
+            <HeaderContainer 
+                displayFlg = {true} 
+                headText = {"ブログ設定管理画面"}
+            />
             <ManagementCreateBlogContainer />
             
         </>

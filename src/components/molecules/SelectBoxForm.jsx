@@ -1,7 +1,5 @@
 import React from "react";
 import { Label } from "../atoms/Label";
-import { Input } from "../atoms/Input";
-import {TextArea} from "../atoms/TextArea"
 import { SelectBox } from "../atoms/SelectBox";
 export const SelectBoxForm = (props) =>{
     return(

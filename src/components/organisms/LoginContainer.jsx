@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 import { Button } from "../atoms/Button";
 import { InputForm } from "../molecules/InputForm";
 import './../../resources/css/login.css';
@@ -22,12 +22,12 @@ export const LoginContainer = (props) =>{
         }
     }
 
-    const login = () => {
+    const login = async() => {
         //バリデーションチェック
         let validationCheckFlg = validation();
         if(!validationCheckFlg){
             //loginAPIを呼ぶ
-            axios.post("http://localhost:8080/dynamicBlog/login",{loginId:id,password:password})
+            await axios.post("http://localhost:8080/dynamicBlog/login",{loginId:id,password:password})
             .then(res => {
                 let apiResult = res.data.result.returnCd;
                 //api成功

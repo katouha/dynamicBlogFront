@@ -4,7 +4,10 @@ import { LoginContainer } from "../organisms/LoginContainer";
 export const LoginTemplate = (props) =>{
     return(
         <>
-            <HeaderContainer displayFlg = {false} />
+            <HeaderContainer 
+                displayFlg = {false} 
+                headText = {"ブログ設定管理画面"}    
+            />
             <LoginContainer />
         </>
     )

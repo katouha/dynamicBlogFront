@@ -6,6 +6,8 @@ export const Link = (props) =>{
         onClick={props.onClick}
         className={props.className}
         href={props.href}
+        target={props.target}
+        rel={props.rel}
     >
         {props.value}
     </a>

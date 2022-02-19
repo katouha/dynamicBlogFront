@@ -1,0 +1,44 @@
+.BlogDetail{
+    height: 60px;
+}
+.BlogDetailContent{
+    text-align: left;
+    padding: 5rem 15rem 5rem 10rem;
+    letter-spacing: 1px;
+}
+.blogTitleDiscriptArea{
+    margin-bottom: 4rem;
+}
+
+.writeDateArea{
+    margin-bottom: 3px;
+}
+.returnLink{
+    margin-right: 5px;
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+.returnLink2{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+.detail{
+    margin-left: 5px;
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+.returnBlock{
+    margin-bottom: 4rem;
+    letter-spacing :0px;
+}
+.registerUserInfo{
+    width: 11rem;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 7px 0px 7px 0px;
+}
+.contentDetailArea{
+    margin-top: 3rem;
+}
